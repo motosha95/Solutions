@@ -1,4 +1,4 @@
-# Solutions
+# Troops Generator
 Summary
 Generate a random army with a specific total count, assuming the available units counts
 ![image](https://user-images.githubusercontent.com/99643678/220886210-91803039-126f-4933-9d4c-5b4020371f96.png)
