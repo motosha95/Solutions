@@ -5,6 +5,7 @@ namespace TroopsGenerator
 {
     public class UIManagement : MonoBehaviour
     {
+        public static UIManagement instance;
         [Header("UI In Scene Elements")]
         [SerializeField]
         Button GenerateBtn;
@@ -25,8 +26,8 @@ namespace TroopsGenerator
         // Start is called before the first frame update
         void Awake()
         {
-            _troopsGenerator = FindObjectOfType<TroopsGeneration>();
-            _resourcesManager = FindObjectOfType<ResourcesManagement>();
+            _troopsGenerator = TroopsGeneration.Instance;
+            _resourcesManager = ResourcesManagement.Instance;
             GenerateBtn.onClick.AddListener(() => GenrateBtnClk());
             RandomizeResourcesBtn.onClick.AddListener(() => RandomizeResourcesBtnClk());
 

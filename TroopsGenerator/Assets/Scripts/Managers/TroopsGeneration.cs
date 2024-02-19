@@ -5,13 +5,14 @@ namespace TroopsGenerator
 {
     public class TroopsGeneration : MonoBehaviour
     {
+        public static TroopsGeneration Instance;
         [SerializeField]
         SessionData _sessionData;
 
         private UIManagement _uIManager;
         private void Awake()
         {
-            _uIManager = FindObjectOfType<UIManagement>();
+            _uIManager = UIManagement.instance;
         }
 
         #region Public Methods

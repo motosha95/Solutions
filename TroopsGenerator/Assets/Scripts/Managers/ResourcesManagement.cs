@@ -5,13 +5,14 @@ namespace TroopsGenerator
 {
     public class ResourcesManagement : MonoBehaviour
     {
+        public static ResourcesManagement Instance;
         [SerializeField]
         private SessionData _sessionData;
 
         private UIManagement _uIManager;
         private void Awake()
         {
-            _uIManager = FindObjectOfType<UIManagement>();
+            _uIManager = UIManagement.instance;
         }
         // Start is called before the first frame update
         void Start()
